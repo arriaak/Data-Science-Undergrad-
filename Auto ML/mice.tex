@@ -1,0 +1,77 @@
+\documentclass[11pt,english]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fullpage}
+\usepackage[showframe=false,margin=1in]{geometry}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{url}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\parindent=0pt
+\setlength{\parskip}{1em}
+\lstset{
+  basicstyle=\fontsize{10}{13}\selectfont\ttfamily
+}
+
+
+\begin{document}
+
+\title{CSC 4780/6780 \\
+Mice Analysis}
+\maketitle
+
+Here is the contingency table:
+
+\begin{tabular}{ r |  c  c | c }
+ Gene & No Cancer & Has Cancer & \\
+\hline
+J & 93 & 37 & \textbf{130} \\
+R & 20 & 1 & \textbf{21} \\
+K & 34 & 5 & \textbf{39} \\
+\hline
+ & \textbf{147} & \textbf{43} & \textbf{190}
+\end{tabular}
+
+
+Here are the conditional proportions:
+
+\begin{tabular}{ r |  c  c | c }
+ Gene & No Cancer & Has Cancer & \\
+\hline
+J & 71.5\% & 28.5\% & \textbf{68.4\%} \\
+R & 95.2\% & 4.8\% & \textbf{11.1\%} \\
+K & 87.2\% & 12.8\% & \textbf{20.5\%} \\
+\hline
+ & \textbf{77.4\%} & \textbf{22.6\%} & \textbf{}
+\end{tabular}
+
+
+
+Here are the expected counts of the genes and cancer were independent:
+
+\begin{tabular}{ r |  c  c | c }
+ Gene & No Cancer & Has Cancer & \\
+\hline
+J & 100.6 & 29.4 & \textbf{130} \\
+R & 16.2 & 4.8 & \textbf{21} \\
+K & 30.2 & 8.8 & \textbf{39} \\
+\hline
+ & \textbf{77.4\%} & \textbf{22.6\%} & \textbf{}
+\end{tabular}
+
+$$X^2 =  8.4972$$
+
+There are 2 degrees of freedom, so the p-value is given by:
+
+$$p = 0.014284171167428195$$
+
+It is unlikely that we would see these number if the genes and cancer were independent.
+
+\end{document}

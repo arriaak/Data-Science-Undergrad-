@@ -1,0 +1,21 @@
+GradientBoostingRegressor:
+	Inference: 0.0095 seconds
+	R2 on test data = 0.9110
+RandomForestRegressor:
+	Inference: 0.0319 seconds
+	R2 on test data = 0.8815
+AdaBoostRegressor:
+	Inference: 0.0147 seconds
+	R2 on test data = 0.7239
+ExtraTreesRegressor:
+	Inference: 0.0170 seconds
+	R2 on test data = 0.9007
+MLPRegressor:
+	Inference: 0.0052 seconds
+	R2 on test data = 0.7861
+CatBoostRegressor:
+	Inference: 0.0030 seconds
+	R2 on test data = 0.9079
+LGBMRegressor:
+	Inference: 0.0071 seconds
+	R2 on test data = 0.9101
